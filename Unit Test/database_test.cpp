@@ -1,6 +1,6 @@
-#include "database.h"
+#include "../Database/database.h"
 #include "test_runner.h"
-#include "condition_parser.h"
+#include "../Condition Parser/condition_parser.h"
 
 using namespace std;
 

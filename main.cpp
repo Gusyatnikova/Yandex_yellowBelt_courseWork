@@ -1,6 +1,6 @@
-#include "condition_parser.h"
-#include "database.h"
-#include "test_runner.h"
+#include "Condition Parser/condition_parser.h"
+#include "Database/database.h"
+#include "Unit Test/test_runner.h"
 
 #include <stdexcept>
 

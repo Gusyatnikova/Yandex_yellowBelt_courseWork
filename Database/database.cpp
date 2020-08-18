@@ -43,25 +43,18 @@ int Database::RemoveIf(const std::function<bool(const Date &, const std::string 
             return !predicate(date, event);
         });
 
-        //auto new_end = remove_if(events.begin(), events.end(), [&date, &predicate](const string &event) {
-        //    return predicate(date, event);
-        //});
         removed_events_cnt += events.end() - new_end;
         for (auto it = new_end; it != events.end();) {
             db_for_find_.at(date).erase(*it);
             ++it;
         }
         events.erase(new_end, events.end());
-
-
         if (events.empty()) {
             it = db_.erase(it);
         } else {
             it++;
         }
     }
-    auto copy = db_;
-    int a = 4;
     return removed_events_cnt;
 }
 
